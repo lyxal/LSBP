@@ -1,23 +1,44 @@
-# This is a safe place to play around with different ideas for LSBP
-
-Ask (...) and wait
-A...
-
-Say (...)
-S... 
-
-Set [name v] to (value)
-sname,value
-
-Change [name v] by (value)
-cname,value
-
-[... v]
-{...}
-
-An idea: manual injection
-Something like this:
-
-¢say (...) for (...) seconds
-
-Implicit "when gf clicked" at beginning. 
+N = Number V = Variable S = String E = expression
+~N = wait (N) seconds
+rN = repeat (N)
+fV,N = set [V v] to 0¶repeat (N)...change [V v] by (1)
+fV,N1,N2 = set [V v] to N1¶ repeat (N2 - N1)... change[V v] by (1)
+F = forever
+iE = if <expression>
+IE = if <expression> ... else ...
+`E = wait until <expression>
+WE = repeat until <expression>
+wE = repeat until not<expression>
+_ = stop all
+\ = stop this script
+| = stop other scripts in sprite
+sV,N = set [V v] to (N)
+cV,N = change [V v] by (N)
+SV = set [V v] to 0
+CV = change [V v] by 1
+aV,E = add (expression) to [V v] (list)
+AV = add (0) to [V v]
+dV,N = delete (N v) of [V v]
+DV = delete last of [V v]
+pE,N,V = insert expression at N of V
+RN,V,E = replace item N of V with E
+.V = variable/list
+XV,N = item N of V
+LV = length of v
+?V,E = V contains E?
+:S = define S
+:S,S|type,... = define S, param...
+;S = call s
+;S,... = call s with params
++-*%/ work in the same way
+®N,N = random N,N
+® = random 1 - 10
+=<>= work in the same way
+&!$ = and, not, or
+jS,S = join (l)(r)
+lN,S = letter N of S
+@RN = round(N)
+@?N = [something v] of N
+#S = Ask S and wait
+# = Ask and wait
+, = (answer)
