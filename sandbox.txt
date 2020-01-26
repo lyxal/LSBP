@@ -1,0 +1,23 @@
+# This is a safe place to play around with different ideas for LSBP
+
+Ask (...) and wait
+A...
+
+Say (...)
+S... 
+
+Set [name v] to (value)
+sname,value
+
+Change [name v] by (value)
+cname,value
+
+[... v]
+{...}
+
+An idea: manual injection
+Something like this:
+
+¢say (...) for (...) seconds
+
+Implicit "when gf clicked" at beginning. 
